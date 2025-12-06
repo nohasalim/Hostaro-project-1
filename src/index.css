@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+  --bg-color1: linear-gradient(
+    to right,
+    rgba(66, 72, 189, 1),
+    rgba(43, 108, 212, 1)
+  );
+  --bg-color2: #f2f2f2;
+  --text-color1: #fb8516;
+  --text-color2: #111111;
+  --text-color3: #ffffff;
+}
+#root {
+  background-color: var(--bg-color2);
+}

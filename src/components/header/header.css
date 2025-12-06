@@ -1,0 +1,17 @@
+.links > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.no-border-focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.no-border-focus:focus,
+.no-border-focus:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
