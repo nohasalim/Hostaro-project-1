@@ -4,6 +4,7 @@ import PlanCard from "./PlanCard";
 export default function ListOfPlans() {
   const plans = [
     {
+      id: "1",
       planName: "Starter",
       price: "$2.99/month",
       description:
@@ -12,6 +13,7 @@ export default function ListOfPlans() {
       emailAcounts: "10",
     },
     {
+      id: "2",
       planName: "Pro",
       price: "$4.99/month",
       description: "Perfect for get started on their nutrition journey",
@@ -19,6 +21,7 @@ export default function ListOfPlans() {
       emailAcounts: "20",
     },
     {
+      id: "3",
       planName: "Max",
       price: "$6.99/month",
       description: "Perfect for get started on their nutrition journey",
@@ -29,7 +32,7 @@ export default function ListOfPlans() {
   return (
     <div className="d-md-flex mt-3 flex-wrap align-items-center justify-content-center">
       {plans.map((plan) => {
-        return <PlanCard plan={plan} />;
+        return <PlanCard key={plan.id} plan={plan} />;
       })}
     </div>
   );
