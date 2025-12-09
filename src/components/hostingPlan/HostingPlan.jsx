@@ -1,5 +1,4 @@
 import React from "react";
-import "./hostingPlan.css";
 import ListOfPlans from "./ListOfPlans";
 export default function HostingPlan() {
   return (

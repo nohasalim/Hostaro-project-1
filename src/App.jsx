@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Hero from "./components/hero/hero";
-import Footer from "./components/footer/Footer";
-import HostingPlan from "./components/hostingPlan/HostingPlan";
-import Help from "./components/help/Help";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Home from "./pages/home/Home";
+import { Route, Routes } from "react-router";
+import ContactUs from "./pages/contactUs/ContactUs";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import About from "./pages/about/About";
 export default function App() {
   useEffect(() => {
     AOS.init();
@@ -14,9 +16,20 @@ export default function App() {
   return (
     <div className="mainApp">
       <Header />
-      <Hero />
-      <HostingPlan />
-      <Help />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="*"
+          element={
+            <div>
+              <p>Page Not Found || Error 404</p>
+            </div>
+          }
+        />
+      </Routes>
       <Footer />
     </div>
   );

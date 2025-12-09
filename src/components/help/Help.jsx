@@ -1,5 +1,6 @@
 import React from "react";
 import "./help.css";
+import ContactForm from "./ContactForm";
 export default function Help() {
   return (
     <div className=" help py-5 ">
@@ -37,22 +38,13 @@ export default function Help() {
           </div>
         </div>
         <div
-          className=" col-xl-6 helpForm pt-5 pt-xl-0"
+          className="col-12 col-xl-6 helpForm pt-5 pt-xl-0"
           data-aos="slide-left"
           data-aos-duration="1500"
           data-aos-easing="ease"
         >
           <h2 className="text-center fw-bold fs-2">Need help? Get in touch</h2>
-          <form className="d-flex flex-column gap-3 py-5">
-            <input type="text" placeholder="Enter your Name" />
-            <input type="email" placeholder="Enter a valid email address" />
-            <textarea
-              cols="30"
-              rows="5"
-              placeholder="Enter your message"
-            ></textarea>
-            <button>Send Message</button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </div>

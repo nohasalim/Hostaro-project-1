@@ -1,15 +1,16 @@
 import React from "react";
 import logo from "../../assets/images/header-logo.png";
 import "./header.css";
+import { Link } from "react-router";
 export default function Header() {
   return (
-    <header className="  bg-white">
+    <header>
       <nav className="container navbar navbar-expand-lg">
         <div className="container-fluid">
           {/* Logo */}
-          <a className="navbar-brand no-border-focus" href="#">
+          <Link className="navbar-brand no-border-focus" to="/home">
             <img src={logo} alt="logo" height="40" />
-          </a>
+          </Link>
 
           {/* Toggle button for offcanvas */}
           <button
@@ -40,33 +41,21 @@ export default function Header() {
             <div className="offcanvas-body ">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 ">
                 <li className="nav-item">
-                  <a className="nav-link text-light" href="#">
+                  <Link className="nav-link text-light" to="/home">
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-light" href="#">
+                  <Link className="nav-link text-light" to="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-light" href="#">
-                    Landing
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link text-light" href="#">
-                    Our Team
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link text-light" href="#">
+                  <Link className="nav-link text-light" to="/contact">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -76,33 +65,21 @@ export default function Header() {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
               <li className="links nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/home">
                   Home
-                </a>
+                </Link>
               </li>
 
               <li className="links nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
 
               <li className="links nav-item">
-                <a className="nav-link" href="#">
-                  Landing
-                </a>
-              </li>
-
-              <li className="links nav-item">
-                <a className="nav-link" href="#">
-                  Our Team
-                </a>
-              </li>
-
-              <li className="links nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
